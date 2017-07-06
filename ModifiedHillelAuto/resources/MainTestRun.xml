@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RegexTestSuite" verbose="1" >
+
+    <test name="Main" >
+        <classes>
+            <class name="Tests" />
+        </classes>
+    </test>
+    <!--<test name="NegativeTests" >-->
+        <!--<parameter name="input" value="6000,1"/>-->
+        <!--<classes>-->
+            <!--<class name="Tests">-->
+                <!--<methods>-->
+                    <!--<exclude name="Positive"/>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+</suite>
