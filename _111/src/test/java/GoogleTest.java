@@ -1,5 +1,4 @@
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
-import org.apache.commons.codec.binary.Base64;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
