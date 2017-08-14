@@ -48,7 +48,7 @@ public class TestRail {
 
     @AfterTest
     public void finalize()throws APIException, IOException{
-       driver.quit();
+       //driver.quit();
         JSONObject c = (JSONObject) TestRailCon.sendPost("close_run/"+runId,new HashMap());
     }
 
@@ -148,11 +148,10 @@ public class TestRail {
 
         WebElement FileRow = driver.findElement(By.cssSelector(".file-list-body li.has-representation:first-child"));
         FileRow.click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class*=sidebar-file]")));
 
         WebElement DeleteBtn=driver.findElement(By.cssSelector("button[class*=delete-btn]"));
         DeleteBtn.click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("button[class*=popup-confirm-btn]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class*=popup-confirm-btn]")));
 
         driver.switchTo().activeElement();
         WebElement Confirmation=driver.findElement(By.cssSelector("button[class*=popup-confirm-btn]"));
